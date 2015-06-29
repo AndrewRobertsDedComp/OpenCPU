@@ -1,0 +1,18 @@
+{
+  "name": "OpenCPU",
+  "version": "0.0.0",
+  "description": "",
+  "main": "opencpu-node.js",
+  "dependencies": {
+    "express": "~4.12.4",
+    "opencpu": "~0.4.0",
+    "ng-file-upload": "~5.0.7",
+    "multer": "~0.1.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}

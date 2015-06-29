@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/homeController.js"></script>
+
+</head>
+<body ng-app="opencpu">
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">OpenCPU</a>
+    </div>
+</nav>
+
+<div ng-controller="HomeController" class="container">
+
+    <div style="margin-top: 20px;">
+        <form ng-submit="submit()">
+            <div class="row" style="margin-bottom: 30px;">
+                <div class="input-field col s6">
+                    <input value="DEDCOMP1234" id="authKey" type="text" class="validate">
+                    <label class="active" for="authKey">Authorization Key</label>
+                </div>
+            </div>
+
+            <label class="active" for="rFileText">R File</label>
+            <div class="row"  style="margin-bottom: 30px;margin-left:0px;">
+                <div class="file-field input-field">
+                    <input class="file-path validate" id="rFileText" type="text"/>
+                    <div class="btn" style="padding-left: 15px !important; padding-right: 15px !important;">
+                        <span>Upload</span>
+                        <input value="R File" type="file" id="rFile" class="validate" ng-model-instant onchange="angular.element(this).scope().onRUpload(this)"/>
+                    </div>
+                </div>
+            </div>
+            <label class="active">Data File</label>
+            <div class="row"  style="margin-bottom: 30px;margin-left:0px;">
+                <div class="file-field input-field">
+                    <input class="file-path validate" type="text"/>
+                    <div class="btn" style="padding-left: 15px !important; padding-right: 15px !important;">
+                        <span>Upload</span>
+                        <input value="Data File" type="file" id="dataFile" class="validate" ng-model-instant onchange="angular.element(this).scope().onDataUpload(this)"/>
+                    </div>
+                </div>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="mdi-content-send right"></i>
+            </button>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
